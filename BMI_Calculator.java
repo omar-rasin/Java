@@ -4,7 +4,7 @@ public class BMI_Calculator {
         
         String name = "Muhammad Omar Rasin";
 
-        int age = 16;
+      
 
         double height = 1.852;
 
