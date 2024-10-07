@@ -8,3 +8,6 @@
 - **PROGRAMMING**
 
 - [X] Class 1 (3/10/24)
+- [X] Class 2 (7/10/24)
+
+
