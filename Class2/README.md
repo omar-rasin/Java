@@ -8,4 +8,3 @@
 
 4. Create a `Student` class that has attributes `name`, `rollNumber`, and `marks`. Write a method to print the student’s details. Use a constructor to initialize the attributes.
 
-5. Write a class `Employee` with attributes `name` and `salary`. Implement a method to display the employee’s information, and use a parameterized constructor to initialize the attributes.
