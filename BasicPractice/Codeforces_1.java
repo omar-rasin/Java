@@ -23,60 +23,46 @@ red according to the statement.
 
  import java.util.Scanner;
 
- public class Codeforces_1 {
- 
-     public static void main(String[] args) {
- 
-         int t;
- 
-         Scanner sc = new Scanner(System.in);
- 
-         t = sc.nextInt();
- 
-         for (int test = 0; test < t; test++) {  // Changed the outer loop variable to `test`
- 
-             int n;
- 
-             n = sc.nextInt();
- 
-             int[] numbers = new int[n];
- 
-             for (int j = 0; j < n; j++) {  // Changed the inner loop variable to `j`
-                 numbers[j] = sc.nextInt();
-             }
- 
-             // Calculate the size of `red` array which will store every alternate element
-             int size = (n + 1) / 2;
- 
-             int[] red = new int[size];
- 
-             int index = 0;
- 
-             // Fill the `red` array with alternate elements from `numbers` array
-             for (int j = 0; j < n; j += 2) {
-                 red[index++] = numbers[j];
-             }
- 
-             // Find the highest element in `red`
-             int highest = red[0];
- 
-             for (int j = 1; j < size; j++) {  // Start from `j = 1` as `red[0]` is already considered
-                 if (red[j] > highest) {
-                     highest = red[j];
-                 }
-             }
- 
-             // Find the number of elements present in `red`
-             int elementsPresent = red.length;
- 
-             // Calculate the sum of the highest element and the number of elements in `red`
-             int sum = highest + elementsPresent;
- 
-             // Output the result
-             System.out.println(sum);
-         }
- 
-         sc.close();  // Close the scanner to prevent resource leaks
-     }
- }
+public class Codeforces_1 {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt(); // Number of test cases
+
+        for (int test = 0; test < t; test++) {
+            int n = sc.nextInt(); // Length of the array
+            int[] numbers = new int[n];
+
+            // Read the elements of the array
+            for (int j = 0; j < n; j++) {
+                numbers[j] = sc.nextInt();
+            }
+
+            // Initialize variables to track maximum score
+            int maxScore = 0;
+
+            // Try every element as the first red element
+            for (int i = 0; i < n; i++) {
+                int score = 0; // Reset score for the current selection
+                int count = 0; // Reset count of red elements
+
+                // Start from the current index and skip the next one
+                for (int j = i; j < n; j += 2) {
+                    score = Math.max(score, numbers[j]); // Get the maximum red element
+                    count++; // Increment the count of red elements
+                }
+
+                // Calculate total score as max element + count of red elements
+                maxScore = Math.max(maxScore, score + count);
+            }
+
+            // Output the maximum score for this test case
+            System.out.println(maxScore);
+        }
+
+        sc.close(); // Close the scanner to prevent resource leaks
+    }
+}
+
  
