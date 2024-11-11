@@ -7,5 +7,3 @@
 3. Implement multilevel inheritance with the classes `Person`, `Student`, and `GraduateStudent`. The `GraduateStudent` class should inherit from `Student`, which in turn inherits from `Person`.
 
 4. Write a program that demonstrates hierarchical inheritance with a superclass `Shape` and subclasses `Circle` and `Rectangle`. Each subclass should have its own method for calculating the area.
-
-5. Create a program that demonstrates multiple inheritance using interfaces. Have an interface `Playable` with a method `play()`, and another interface `Eatable` with a method `eat()`. Write a class `Child` that implements both interfaces.
